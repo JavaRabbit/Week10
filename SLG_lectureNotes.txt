@@ -1,1 +1,11 @@
 Fluency, juggling (growing new neurons when juggling)
+
+
+Stunt double Rspec testing
+double method returns an Object that satisfies the test
+
+Unit test - fast,
+
+Javascript test - jasmine
+
+code smells, code deodorant

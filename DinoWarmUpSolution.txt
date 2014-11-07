@@ -1,0 +1,16 @@
+Dinos warm up solutions (week 10 Friday)
+
+ActiveRecord::Base.connection.tables
+(current tables are dinos and eggs)
+
+What is the name of the Dino with a genus of "Protarchaeopteryx"
+Dino.find_by genus: 'Protarchaeopteryx'
+Estelle Mertz
+
+
+Alphabetically by genus, what is the last Dino?
+Dino.order('genus desc')
+Zuniceratops
+
+How many Dinos have a length of less than 20?
+eg. count by the length

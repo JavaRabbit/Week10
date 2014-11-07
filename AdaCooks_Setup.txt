@@ -1,0 +1,75 @@
+go to Ada Projects Ada-Cooks on github.com
+press Fork button
+now, Ada-Cooks is also in my github
+
+
+in Ada Week 10 folder (in terminal),   git clone  https://github.com/JavaRabbit/Ada-Cooks.git
+
+rails new cooks -T -d postgresql
+
+
+when i want to submit, push it to my github, and do a pull request
+
+// Random note:
+Order.includes(:order_items).where("order_items.id=?",2)
+
+
+Check all Models -  *****************************************
+Show all databases from rails console, note: do this in rails console, and run "rake db:create" first
+ActiveRecord::Base.connection.tables
+
+
+Create a Model ******************************************
+
+rails generate model Recipe name:string directions:text
+
+rails generate model Ingredient name:string
+
+rails generate model RecipeIngredient recipe_id:integer ingredient_id:integer
+
+Generate some Controllers **************************************
+
+rails generate controller Recipes index
+rails destroy controller Recipes index
+
+
+Creating a spec file **********************************
+
+gem 'rspec-rails', '2.13.1'
+
+Make sure you have the 'rspec-rails'  gem in gemfile, do bundle install
+before doing "rails generate controller Recipes index"
+
+See your spec file in spec > controllers >recipes_controller_spec.rb
+
+Error **********************************
+
+testing rspec with "rspec spec"
+cannot load such file -- spec_helper
+
+rails generate rspec:install
+http://stackoverflow.com/questions/5045867/ruby-debug-no-such-file-to-load-spec-helper
+
+Warning: you should require 'minitest/autorun' instead.
+(fix: added gem minitest)
+
+Removing Sass gem ***************************************
+commented out the sass gem in gemfile (makes the rspec test run faster)
+
+
+Creating some static pages ***************************
+
+rails generate controller StaticPages home help
+
+
+Capybara *****************************************
+change gemfile to bump up capybara version to version 2.4.4 (it works with this version. It does
+not work with version 2.1.0 or 2.2.0)
+
+note that I copied from sample_app:
+
+group :test do
+  gem 'selenium-webdriver', '2.35.1'
+  gem 'capybara', '2.1.0'
+end
+
